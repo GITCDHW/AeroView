@@ -7,14 +7,14 @@
 #define WIFI_PASS "gbig4735"
 
 #define DHTPIN 4          
-#define DHTTYPE DHT22   
+#define DHTTYPE DHT11
 #define DEVICE_ID "envBot_01"
 #define ENDPOINT_URL "https://prs-tech-project-portal/api/brain"
 
 // ====== SETUP ======
 DHT dht(DHTPIN, DHTTYPE);
 unsigned long lastPost = 0;
-const unsigned long postInterval = 100000; 
+const unsigned long postInterval = 5000; 
 
 void setup() {
   Serial.begin(115200);
